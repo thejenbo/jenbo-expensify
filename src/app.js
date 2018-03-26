@@ -9,6 +9,7 @@ import getVisibleExpenses from './selectors/expenses';
 import App from './components/App';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import './firebase/firebase';
 
 const store = configureStore();
 
@@ -17,10 +18,6 @@ store.subscribe(() => {
     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
     console.log(visibleExpenses);
 });
-
-store.dispatch(addExpense( { description : 'water bill', amount: 100, createdAt: 10000 } ));
-store.dispatch(addExpense( { description : 'gas bill', amount: 50, createdAt: -100 } ));
-store.dispatch(addExpense( { description : 'rent', amount: 0, createdAt:  400 } ));
 
 const jsx = (
     <Provider store={store}>
