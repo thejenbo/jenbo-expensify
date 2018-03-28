@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
-import Button from 'material-ui/Button';
 
 const EditExpense = (props) => {
     return (
