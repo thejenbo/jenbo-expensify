@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startAddExpense } from '../actions/expenses';
+import { Header } from 'semantic-ui-react'
 
 const StartAddExpense = (props) => (
     <div>
-       <h2>add an expense</h2>
+       <Header size="large">add an expense</Header>
        <ExpenseForm
         onSubmit={(expense) => {
             props.dispatch(startAddExpense(expense));

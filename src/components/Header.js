@@ -8,7 +8,7 @@ const Header = (props) => (
         <nav>
             <Menu pointing secondary>
                 <Menu.Item as={NavLink} to="/" activeClassName="is-active" exact={true}>dashboard</Menu.Item>
-                <Menu.Item as={NavLink} to="/create" activeClassName="is-active">new expense</Menu.Item>
+                <Menu.Item as={NavLink} to="/create" activeClassName="is-active">create expense</Menu.Item>
             </Menu>
         </nav>
     </header>

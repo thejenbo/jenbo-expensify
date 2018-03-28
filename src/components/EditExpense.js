@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
-import { Button } from 'semantic-ui-react';
+import { Button, Header } from 'semantic-ui-react';
 
 const EditExpense = (props) => {
     return (
         <div>
-            <h2>edit expense</h2>
+            <Header size="large">edit expense</Header>
             <ExpenseForm
                 expense={props.expense}
                 onSubmit={(expense) => {

@@ -18,11 +18,14 @@ const ExpenseList = (props) => (
                 </Table.Row>
             </Table.Header>
             <Table.Body>
-                {props.expenses.map(
-                    (expense) => (
-                        <ExpenseListItem key={expense.id} {...expense} />
+                {
+                    props.expenses.length >= 1 ? props.expenses.map(
+                        (expense) => (
+                            <ExpenseListItem key={expense.id} {...expense} />
+                        )
                     )
-                )}
+                    : <Table.Cell>no expenses available</Table.Cell>
+                }
             </Table.Body>
         </Table>
     </div>
