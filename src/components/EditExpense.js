@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
+import Button from 'material-ui/Button';
 
 const EditExpense = (props) => {
     return (
@@ -12,8 +13,9 @@ const EditExpense = (props) => {
                     props.dispatch(startEditExpense(props.expense.id, expense));
                     props.history.push('/');
                 }}
+                buttonText="update expense"
             />
-            <button onClick={() => {
+            <button variant="raised" color="primary" onClick={() => {
 				props.dispatch(startRemoveExpense({ id: props.expense.id }))
 				props.history.push('/');
             }}>remove</button>

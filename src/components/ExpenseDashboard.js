@@ -3,12 +3,15 @@ import ExpenseList from './ExpenseList';
 import expenseListFilters from './ExpenseListFilters';
 import ExpenseListFilters from './ExpenseListFilters';
 import ExpensesSummary from './ExpensesSummary';
+import { Segment, Divider } from 'semantic-ui-react';
 
 const ExpenseDashBoard = () => (
     <div>
-        <ExpensesSummary />
         <ExpenseListFilters />
-        <ExpenseList />
+
+        <Segment>
+            <ExpenseList />
+        </Segment>
     </div>
 );
 

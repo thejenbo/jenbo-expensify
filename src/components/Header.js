@@ -1,11 +1,16 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import { Menu } from 'semantic-ui-react'
 
 const Header = (props) => (
     <header>
         <h1>expensify</h1>
-        <NavLink to="/" activeClassName="is-active" exact={true}>dashboard </NavLink>
-        <NavLink to="/create" activeClassName="is-active">add new</NavLink>
+        <nav>
+            <Menu pointing secondary>
+                <Menu.Item as={NavLink} to="/" activeClassName="is-active" exact={true}>dashboard</Menu.Item>
+                <Menu.Item as={NavLink} to="/create" activeClassName="is-active">new expense</Menu.Item>
+            </Menu>
+        </nav>
     </header>
 );
 

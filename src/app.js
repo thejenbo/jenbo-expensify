@@ -8,6 +8,7 @@ import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import App from './components/App';
 import 'normalize.css/normalize.css';
+import { Container } from 'semantic-ui-react';
 import './styles/styles.scss';
 import './firebase/firebase';
 
@@ -15,7 +16,9 @@ const store = configureStore();
 
 const jsx = (
     <Provider store={store}>
-        <AppRouter />
+        <Container>
+            <AppRouter />
+        </Container>
     </Provider>
 );
 

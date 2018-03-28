@@ -36,6 +36,7 @@
     "redux": "3.7.2",
     "redux-thunk": "^2.2.0",
     "sass-loader": "6.0.6",
+    "semantic-ui-react": "^0.79.0",
     "style-loader": "0.18.2",
     "uuid": "3.1.0",
     "validator": "8.0.0",

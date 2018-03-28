@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
+import { Form } from 'semantic-ui-react';
 
 export default class Expenseform extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ export default class Expenseform extends React.Component {
             amount: props.expense ? (props.expense.amount / 100).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
             datePickerFocused: false,
-            formError: ''
+            buttonText: props.buttonText ? props.buttonText : 'add expense',
         };
     }
     onDescriptionChange = (e) => {
@@ -65,7 +66,7 @@ export default class Expenseform extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.onSubmit}>
+                <Form onSubmit={this.onSubmit}>
                     <input
                         type="text"
                         placeholder="description"
@@ -94,9 +95,9 @@ export default class Expenseform extends React.Component {
                     >
                     </textarea>
                     <button>
-                        add expense
+                        {this.state.buttonText}
                     </button>
-                </form>
+                </Form>
                 {this.state.formError && <p>{this.state.formError}</p>}
             </div>
         );
