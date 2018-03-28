@@ -46,7 +46,7 @@ class ExpenseListFilters extends React.Component {
                         
                         <Form.Select 
                             options={this.options}
-                            placeholder="sort by"
+                            placeholder="date"
                             onChange={this.onFilterChange}
                             width={4}
                         />

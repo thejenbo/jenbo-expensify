@@ -2,22 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
+import { Button } from 'semantic-ui-react';
 
 const EditExpense = (props) => {
     return (
         <div>
+            <h2>edit expense</h2>
             <ExpenseForm
                 expense={props.expense}
                 onSubmit={(expense) => {
                     props.dispatch(startEditExpense(props.expense.id, expense));
                     props.history.push('/');
                 }}
-                buttonText="update expense"
+                buttonText="update"
             />
-            <button variant="raised" color="primary" onClick={() => {
+            <Button color="red" onClick={() => {
 				props.dispatch(startRemoveExpense({ id: props.expense.id }))
 				props.history.push('/');
-            }}>remove</button>
+            }}>remove</Button>
         </div>
     );
 };

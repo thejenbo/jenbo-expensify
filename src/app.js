@@ -6,7 +6,6 @@ import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
-import App from './components/App';
 import 'normalize.css/normalize.css';
 import { Container } from 'semantic-ui-react';
 import './styles/styles.scss';
