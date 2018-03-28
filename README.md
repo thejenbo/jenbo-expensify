@@ -1,6 +1,7 @@
 # jenbo-expensify
-###expense tracking interface built with react
-###connects to firebase database
+
+### expense tracking interface built with react
+### connects to firebase database
 
 ## to do
 - add authentication
