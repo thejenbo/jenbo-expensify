@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Header from '../components/Header';
+import Login from '../components/Login';
 import ExpenseDashBoard from '../components/ExpenseDashboard';
 import AddExpense from '../components/AddExpense';
 import EditExpense from '../components/EditExpense';
@@ -13,8 +14,12 @@ const AppRouter = () => (
             <Switch>
                 <Route 
                     path="/"
-                    component={ExpenseDashBoard}
+                    component={Login}
                     exact={true}
+                />
+                <Route 
+                    path="/dashboard"
+                    component={ExpenseDashBoard}
                 />
                 <Route 
                     path="/create"
