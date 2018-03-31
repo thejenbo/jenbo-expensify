@@ -17,6 +17,7 @@ const store = configureStore();
 const jsx = (
     <Provider store={store}>
         <Container>
+            <h1>expen$ify</h1>
             <AppRouter />
         </Container>
     </Provider>
