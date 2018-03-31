@@ -17,11 +17,8 @@ const Header = ({ startLogOut }) => (
     </header>
 );
 
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch) => ({
     startLogOut: () => dispatch(startLogOut())
-    .then(() => {
-        props.history.push('/');
-    })
 });
 
 export default connect(undefined, mapDispatchToProps)(Header);

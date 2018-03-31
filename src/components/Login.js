@@ -15,11 +15,8 @@ const Login = ({ startLogin }) => (
     </div>
 );
 
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch) => ({
     startLogin: () => dispatch(startLogin())
-    .then(() => {
-        props.history.push('/dashboard');
-    })
 });
 
 export default connect(undefined, mapDispatchToProps)(Login);

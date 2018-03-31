@@ -6,8 +6,17 @@ export const startLogin = (props) => {
     };
 };
 
+export const logIn = (uid) => ({
+    type: 'LOGIN',
+    uid
+});
+
 export const startLogOut = (props) => {
     return () => {
         return firebase.auth().signOut();
     };
 };
+
+export const logOut = () => ({
+    type: 'LOGOUT'
+});
