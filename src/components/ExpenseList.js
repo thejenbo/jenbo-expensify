@@ -24,7 +24,10 @@ const ExpenseList = (props) => (
                             <ExpenseListItem key={expense.id} {...expense} />
                         )
                     )
-                    : <Table.Cell>no expenses available</Table.Cell>
+                    :
+                    <Table.Row>
+                        <Table.Cell>no expenses available</Table.Cell>
+                    </Table.Row>
                 }
             </Table.Body>
         </Table>
